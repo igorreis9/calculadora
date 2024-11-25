@@ -1,0 +1,101 @@
+@font-face {
+    font-family: digital7;
+    src: url(./digital-7.ttf);   
+}
+
+@font-face {
+    font-family: digital7italic;
+    src: url(./digital-7italic.ttf);
+}
+
+*{
+    overflow: hidden;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #2C2C2C;
+    color: #d4d4d4;
+}
+
+#calculator {
+    max-width: 360px;
+    background-color: #4C5C61;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 1px 2px 10px #00000096;
+    object-fit: cover;
+}
+
+#display {
+    font-size: 22px;
+    text-align: right;
+    width: 100%;
+    height: 60px;
+    margin-bottom: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    color: #1E1E1E;
+    background-color: #F1F1F1;
+    border: none;
+    box-sizing: border-box;
+    font-family: digital7italic;
+}
+
+button {
+    width: calc(25% - 12px);
+    height: 50px;
+    font-size: 22px;
+    margin: 10px 5px;
+    border: none;
+    border-radius: 5px;
+    float: left;
+    background-color: #444444;
+    color: #FFFFFF;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    font-family: digital7;
+}
+
+button:not(#de){
+    font-size: 30px;
+}
+
+.operador {
+    background-color: #FF8C00;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+button:hover:not(.operador){
+    background-color: #808080;
+}
+
+button:active{
+    transform: scale(0.7);
+}
+
+.igual {
+    background-color: #28A745;
+}
+
+.video-planodefundo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+
+}
+
+.video-planodefundo video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
